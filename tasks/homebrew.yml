@@ -1,7 +1,6 @@
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
     name:
-      - google-chrome
       - iterm2
       - raycast
       - slack

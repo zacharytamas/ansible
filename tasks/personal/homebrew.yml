@@ -4,6 +4,7 @@
   homebrew_cask:
     name:
       - element
+      - google-chrome
       - obsidian
       - setapp
       - syncthing

@@ -11,10 +11,10 @@
       register: whoami
 
     - include_tasks: tasks/git.yml
-    - include: tasks/homebrew.yml
-    - include: tasks/zsh.yml
-    - include: tasks/mac-apps.yml
-    - include: tasks/node.yml
+    - include_tasks: tasks/homebrew.yml
+    - include_tasks: tasks/zsh.yml
+    - include_tasks: tasks/mac-apps.yml
+    - include_tasks: tasks/node.yml
 
     # Personal
     - include_tasks: tasks/personal/all.yml
