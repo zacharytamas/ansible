@@ -1,0 +1,14 @@
+# Personal-only Homebrew Cask packages
+
+- name: Installing Homebrew Cask Packages
+  homebrew_cask:
+    name:
+      - element
+      - obsidian
+      - setapp
+      - syncthing
+    state: present
+    update_homebrew: true
+  register: result
+  until: result is successful
+  when: homebrew_installed.stat.exists

@@ -1,0 +1,19 @@
+- name: Determine if oh-my-zsh is installed
+  stat: { path: "~/.oh-my-zsh" }
+  register: oh_my_stats
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: oh_my_stats.stat.exists == False
+  become_user: "{{ whoami.stdout }}"
+
+- name: Install zsh-autosuggestions
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-autosuggestions.git"
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+
+- name: Ensure that Starship is loaded in zsh config
+  ansible.builtin.lineinfile:
+    path: ~/.zshrc
+    regexp: 'eval "$(starship init zsh)"'
+    line: eval "$(starship init zsh)"

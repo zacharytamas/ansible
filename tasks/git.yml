@@ -1,0 +1,7 @@
+- name: "[Git] default branch name"
+  git_config: { name: init.defaultBranch, scope: global, value: "main" }
+  tags: [git]
+
+- name: "[Git] config commit name"
+  git_config: { name: user.name, scope: global, value: "Zachary Jones" }
+  tags: [git]

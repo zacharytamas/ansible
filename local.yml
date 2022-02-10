@@ -1,0 +1,25 @@
+- hosts: localhost
+
+  pre_tasks:
+    - name: Assert Homebrew Is Installed
+      stat: { path: /opt/homebrew/bin/brew }
+      register: homebrew_installed
+
+  tasks:
+    - name: Determine who I am
+      ansible.builtin.shell: "whoami"
+      register: whoami
+
+    - include_tasks: tasks/git.yml
+    - include: tasks/homebrew.yml
+    - include: tasks/zsh.yml
+    - include: tasks/mac-apps.yml
+    - include: tasks/node.yml
+
+    # Personal
+    - include_tasks: tasks/personal/all.yml
+      when: ansible_hostname == "Ford"
+
+    # Work: Block
+    - include_tasks: tasks/work-block/all.yml
+      when: ansible_hostname == "zjones-macbookpro.local"

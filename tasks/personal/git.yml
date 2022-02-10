@@ -1,0 +1,3 @@
+- name: "[Git][Personal] Git personal setup email"
+  git_config: { name: user.email, scope: global, value: "zachary@jones.cx" }
+  tags: [git]

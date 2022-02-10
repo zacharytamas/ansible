@@ -1,0 +1,7 @@
+- name: Install a list of apps
+  community.general.mas:
+    id:
+      - 975937182 #  Fantastical
+      - 1435957248 # Drafts
+      - 1425368544 # Timery
+    state: present
