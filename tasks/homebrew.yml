@@ -7,6 +7,7 @@
       - visual-studio-code
       - alt-tab
       - kaleidoscope
+      - textexpander
     state: present
     update_homebrew: true
   register: result
