@@ -1,3 +1,12 @@
+- name: Tap Homebrew Fonts Cask
+  homebrew_tap:
+    name: "homebrew/cask-fonts"
+
+- name: Install fonts from Homebrew
+  homebrew_cask:
+    name:
+      - font-cascadia-code-pl
+
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
     name:
