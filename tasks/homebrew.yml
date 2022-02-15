@@ -23,15 +23,23 @@
   until: result is successful
   when: homebrew_installed.stat.exists
 
-- name: Installing Homebrew Packages
+- name: Install evergreen Homebrew
   homebrew:
     name:
       - git
+      - gh
+    state: latest
+    update_homebrew: true
+  until: result is successful
+  when: homebrew_installed.stat.exists
+
+- name: Installing Homebrew Packages
+  homebrew:
+    name:
       - mas
       - neovim
       - starship
       - wget
-      - gh
     state: present
     update_homebrew: true
   register: result
