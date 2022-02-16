@@ -5,3 +5,7 @@
 - name: "[Git] config commit name"
   git_config: { name: user.name, scope: global, value: "Zachary Jones" }
   tags: [git]
+
+- name: "[Git] Diff algorithm"
+  git_config: { name: diff.algorithm, scope: global, value: "minimal" }
+  tags: [git]
