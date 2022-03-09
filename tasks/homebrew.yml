@@ -6,6 +6,12 @@
   homebrew_cask:
     name:
       - font-cascadia-code-pl
+      - font-recursive-code
+    state: latest
+    update_homebrew: true
+  register: result
+  until: result is successful
+  when: homebrew_installed.stat.exists
 
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
