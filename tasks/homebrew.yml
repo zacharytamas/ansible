@@ -35,7 +35,6 @@
       - git
       - gh
       - jesseduffield/lazygit/lazygit
-      - jesseduffield/lazynpm/lazynpm
     state: latest
     update_homebrew: true
   until: result is successful
