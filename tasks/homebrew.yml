@@ -23,6 +23,7 @@
       - alt-tab
       - kaleidoscope
       - textexpander
+      - spotify
     state: present
     update_homebrew: true
   register: result
