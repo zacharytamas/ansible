@@ -49,6 +49,7 @@
       - neovim
       - starship
       - wget
+      - asdf
     state: present
     update_homebrew: true
   register: result
