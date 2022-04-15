@@ -22,4 +22,4 @@
 
     # Work: Block
     - include_tasks: tasks/work-block/all.yml
-      when: ansible_hostname == "zjones-macbookpro.local"
+      when: ansible_hostname == "zjones-macbookpro"
