@@ -12,14 +12,10 @@
 
     - include_tasks: tasks/git.yml
     - include_tasks: tasks/homebrew.yml
-    - include_tasks: tasks/zsh.yml
-    - include_tasks: tasks/mac-apps.yml
-    - include_tasks: tasks/node.yml
+    # - include_tasks: tasks/zsh.yml
+    # - include_tasks: tasks/mac-apps.yml
+    # - include_tasks: tasks/node.yml
 
     # Personal
     - include_tasks: tasks/personal/all.yml
       when: ansible_hostname == "Ford"
-
-    # Work: Block
-    - include_tasks: tasks/work-block/all.yml
-      when: ansible_hostname == "zjones-macbookpro"
