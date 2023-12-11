@@ -21,14 +21,15 @@
 - name: Installing Homebrew Cask Packages
   homebrew_cask:
     name:
-      # - iterm2
+      - arc # Browser of choice
+      - elgato-stream-deck
+      - kaleidoscope
       - raycast
+      - rectangle-pro
+      - setapp
+      - spotify
       - visual-studio-code-insiders
       - warp
-      - elgato-stream-deck
-      - setapp
-      # - kaleidoscope
-      - spotify
     state: present
     update_homebrew: true
   register: result
@@ -53,7 +54,6 @@
       # - neovim
       # - starship
       - wget
-      # - asdf
     state: present
     update_homebrew: true
   register: result

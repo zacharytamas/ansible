@@ -1,6 +1,6 @@
 - name: Install a list of apps
   community.general.mas:
     id:
-      - 1487937127 # Craft
+      # - 1487937127 # Craft
       - 1475387142 # Tailscale
     state: present

@@ -5,9 +5,7 @@
     name:
       - element
       - google-chrome
-      - obsidian
       - setapp
-      - syncthing
     state: present
     update_homebrew: true
   register: result
