@@ -2,6 +2,10 @@
   homebrew_tap:
     name: "homebrew/cask-fonts"
 
+- name: Tap Homebrew Versions Cask
+  homebrew_tap:
+    name: "homebrew/cask-versions"
+
 - name: Install fonts from Homebrew
   homebrew_cask:
     name:
@@ -19,11 +23,11 @@
     name:
       # - iterm2
       - raycast
-      # - slack
-      # - visual-studio-code
-      # - alt-tab
+      - visual-studio-code-insiders
+      - warp
+      - elgato-stream-deck
+      - setapp
       # - kaleidoscope
-      # - textexpander
       - spotify
     state: present
     update_homebrew: true
@@ -45,7 +49,7 @@
 - name: Installing Homebrew Packages
   homebrew:
     name:
-      # - mas
+      - mas
       # - neovim
       # - starship
       - wget
