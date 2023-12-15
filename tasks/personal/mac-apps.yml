@@ -3,4 +3,6 @@
     id:
       # - 1487937127 # Craft
       - 1475387142 # Tailscale
+      - 585829637 # Todoist
+      - 1290358394 # Cardhop
     state: present
