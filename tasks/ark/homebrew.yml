@@ -1,0 +1,9 @@
+- name: Install evergreen Homebrew
+  homebrew:
+    name:
+      - caddy
+      - jesseduffield/lazydocker/lazydocker
+    state: latest
+    update_homebrew: true
+  until: result is successful
+  when: homebrew_installed.stat.exists

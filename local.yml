@@ -19,3 +19,5 @@
     # Personal
     - include_tasks: tasks/personal/all.yml
       when: ansible_hostname == "Ford" or ansible_hostname == "Ark"
+    - include_tasks: tasks/ark/all.yml
+      when: ansible_hostname == "Ark"
