@@ -12,6 +12,8 @@
       - font-cascadia-code-pl
       - font-recursive-code
       - font-fantasque-sans-mono
+      - font-monaspace
+      - font-monaspace-nerd-font
     state: latest
     update_homebrew: true
   register: result
